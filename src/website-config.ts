@@ -54,10 +54,10 @@ export type WebsiteConfig = {
 };
 
 const config: WebsiteConfig = {
-  title: 'Ghost',
-  description: 'The professional publishing platform',
-  coverImage: 'img/blog-cover.png',
-  logo: 'img/ghost-logo.png',
+  title: 'Cyberlawyer.run',
+  description: 'Servicios jurídicos especializados en tecnología',
+  coverImage: 'img/temp1.jpg',
+    logo: 'img/ghost-logo.png',
   lang: 'en',
   siteUrl: 'https://gatsby-casper.netlify.com',
   facebook: 'https://www.facebook.com/ghost',

@@ -1,9 +1,9 @@
 ---
 layout: post
-title: A Full and Comprehensive Style Test
-image: img/testimg-cover.jpg
-author: [Ghost]
-date: 2018-09-30T07:03:47.149Z
+title: Criminalidad 4.0 - Script Kiddies
+image: img/scriptkiddies-banner.jpg
+author: [Raul Moreno]
+date: 2022-08-30T07:03:47.149Z
 tags:
   - Tests
   - Getting Started
@@ -28,6 +28,14 @@ Below is just about everything you’ll need to style in the theme. Check the so
 ---
 
 Lorem ipsum dolor sit amet, [test link]() adipiscing elit. **This is strong.** Nullam dignissim convallis est. Quisque aliquam. _This is emphasized._ Donec faucibus. Nunc iaculis suscipit dui. 5<sup>3</sup> = 125. Water is H<sub>2</sub>O. Nam sit amet sem. Aliquam libero nisi, imperdiet at, tincidunt nec, gravida vehicula, nisl. <cite>The New York Times</cite> (That’s a citation). <span style="text-decoration:underline;">Underline</span>. Maecenas ornare tortor. Donec sed tellus eget sapien fringilla nonummy. Mauris a ante. Suspendisse quam sem, consequat at, commodo vitae, feugiat in, nunc. Morbi imperdiet augue quis tellus.
+
+Minecraft, Roblox, y Fortnite son videojuegos muy populares, en especial entre jóvenes(8 - 16 años). En si estos juegos son bastante inofensivos, sin embargo en ocasiones los desacuerdos entre jugadores pueden salirse de control, y los métodos de intimidación y acoso que utilizan pueden ser drásticos.
+
+Los "swattings" son un buen ejemplo de estos métodos, se hacen realizando llamadas telefónicas a departamentos de policía, y amenazando con bombas o situaciones de toma de rehenes para provocar asaltos policiales con unidades especializadas.
+
+Existen muchos casos de swattings, inclusive **[algunos realizados por jóvenes de tan solo 13 años]** (https://arstechnica.com/tech-policy/2015/03/13-year-old-minecraft-player-confesses-to-swatting-police-say/). Algunos con desenlaces fatales, por ejemplo el de [Shane Sonderman](https://www.documentcloud.org/documents/21014922-shane-sonderman-indictment) quien recibió una sentencia de 60 meses en custodia, por **[utilizar el swatting como estrategia de intimidación para obtener el handle de Twitter(nombre de usuario) @Tennessee]**(https://www.justice.gov/usao-wdtn/pr/serial-swatter-sentenced-sixty-months-federal-custody-connection-death-tennessee-man) de su dueño Mark Herring, quien sufrió un infarto y murió al ver las unidades policiales.
+
+Como es posible para un joven de 13 años conocer la ubicación exacta de otro jugador, y enviarle un equipo swat? y porque acosar a una persona con swattings para obtener un nombre de usuario en Twitter? 
 
 HTML and CSS are our tools. Mauris a ante. Suspendisse quam sem, consequat at, commodo vitae, feugiat in, nunc. Morbi imperdiet augue quis tellus. Praesent mattis, massa quis luctus fermentum, turpis mi volutpat justo, eu volutpat enim diam eget metus. To copy a file type `COPY filename`. <del>Dinner’s at 5:00.</del> <span style="text-decoration:underline;">Let’s make that 7</span>. This <del>text</del> has been struck.
 
