@@ -81,7 +81,7 @@ export type PageContext = {
   };
   frontmatter: {
     image: any;
-    excerpt: string;
+    
     title: string;
     date: string;
     draft?: boolean;
@@ -142,8 +142,11 @@ function PageTemplate({ data, pageContext, location }: PageTemplateProps) {
             content={`${config.siteUrl}${getSrc(post.frontmatter.image)}`}
           />
         )}
+          )}
         <meta name="twitter:label1" content="Written by" />
-        <meta name="twitter:data1" content={post.frontmatter.author[0].name} />
+        {post.frontmatter.author && post.frontmatter.author[0] && (
+          <meta name="twitter:data1" content={post.frontmatter.author[0].name} />
+        )}
         <meta name="twitter:label2" content="Filed under" />
         {post.frontmatter.tags && <meta name="twitter:data2" content={post.frontmatter.tags[0]} />}
         {config.twitter && (
@@ -201,8 +204,10 @@ function PageTemplate({ data, pageContext, location }: PageTemplateProps) {
                     <AuthorList authors={post.frontmatter.author} tooltip="large" />
                     <section className="post-full-byline-meta">
                       <h4 className="author-name">
-                        {post.frontmatter.author.map(author => (
-                          <Link key={author.name} to={`/author/${kebabCase(author.name)}/`}>
+                        {post.frontmatter.author
+                        .filter(author => author !== null)
+                        .map( author => (
+                          <Link key={author.name} to="/about/">
                             {author.name}
                           </Link>
                         ))}
@@ -473,7 +478,7 @@ export const query = graphql`
     relatedPosts: allMarkdownRemark(
       filter: { frontmatter: { tags: { in: [$primaryTag] }, draft: { ne: true } } }
       limit: 5
-      sort: { frontmatter: { date: ASC } }
+      sort: { frontmatter: { date: DESC } }
     ) {
       totalCount
       edges {

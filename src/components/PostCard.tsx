@@ -77,16 +77,17 @@ export function PostCard({ post, isLarge = false }: PostCardProps) {
           <PostCardBylineContent className="post-card-byline-content">
             <span>
               {post.frontmatter.author.map((author, index) => (
+                author && (
                 <React.Fragment key={author.name}>
                   <Link to={`/author/${kebabCase(author.name)}/`}>{author.name}</Link>
                   {post.frontmatter.author.length - 1 > index && ', '}
                 </React.Fragment>
+                )
               ))}
             </span>
-            <span className="post-card-byline-date">
-              <time dateTime={datetime}>{displayDatetime}</time>{' '}
-              <span className="bull">&bull;</span> {post.fields.readingTime.text}
-            </span>
+
+                <span className="bull">&bull;</span> {post.fields.readingTime.text}
+            
           </PostCardBylineContent>
         </PostCardMeta>
       </PostCardContent>

@@ -55,9 +55,9 @@ export type WebsiteConfig = {
 
 const config: WebsiteConfig = {
   title: 'Cyberlawyer.run',
-  description: 'Servicios jurídicos especializados en tecnología',
+  description: 'Servicios jurídicos especializados en tecnología.',
   coverImage: 'img/temp1.jpg',
-    logo: 'img/ghost-logo.png',
+    logo: 'img/cyberlawyer.PNG',
   lang: 'en',
   siteUrl: 'https://gatsby-casper.netlify.com',
   facebook: 'https://www.facebook.com/ghost',

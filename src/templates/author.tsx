@@ -214,7 +214,7 @@ export const pageQuery = graphql`
     }
     allMarkdownRemark(
       filter: { frontmatter: { draft: { ne: true } } }
-      sort: { frontmatter: { date: ASC } }
+      sort: { frontmatter: { date: DESC } }
       limit: 2000
     ) {
       edges {

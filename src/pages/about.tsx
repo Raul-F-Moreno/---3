@@ -8,6 +8,8 @@ import SiteNav from '../components/header/SiteNav';
 import { PostFullContent } from '../components/PostContent';
 import { Wrapper } from '../components/Wrapper';
 import IndexLayout from '../layouts';
+import { GatsbyImage, getImage } from 'gatsby-plugin-image';
+import { useStaticQuery, graphql } from 'gatsby';
 import {
   inner,
   outer,
@@ -35,6 +37,15 @@ const PageTemplate = css`
 `;
 
 function About() {
+  const data = useStaticQuery(graphql`
+    query {
+      file(relativePath: { eq: "img/banners/rfm.png"}) {
+       childImageSharp {
+        gatsbyImageData(layout: CONSTRAINED, width: 150, height: 150)
+      }
+    }
+  }
+`);
   return (
     <IndexLayout>
       <Helmet>
@@ -52,29 +63,35 @@ function About() {
           <div css={inner}>
             <article className="post page" css={[PostFull, NoImage]}>
               <PostFullHeader className="post-full-header">
-                <PostFullTitle className="post-full-title">About</PostFullTitle>
+                <PostFullTitle className="post-full-title">>About</PostFullTitle>
               </PostFullHeader>
 
               <PostFullContent className="post-full-content">
                 <div className="post-content">
+                 <div style={{ display: 'flex', justifyContent: 'center' }}>
+                  <GatsbyImage
+                    image={getImage(data.file)}
+                    alt="Profile picture"
+                    style={{ borderRadius: '50%', marginBottom: '1rem' }}
+                    />
+                </div>
                   <h5>
                         <a href="https://linkedin.com/in/raulfmoreno">Raul Felipe Moreno</a>
                   </h5>
-                  <h3>
-                    Whoami:
-                  </h3>
                   <p>
-
                     Soy un abogado especializado en derecho empresarial y hacking ético legal con una sólida formación analítica y una dedicación a las decisiones basadas en datos. 
                     Con solida experiencia en el campo legal y de ciberseguridad, incluyendo una participación activa en la comunidad de ciberseguridad en Panamá y la participación en diversas conferencias tanto nacionales como internacionales como ponente, 
                     estoy bien preparado para brindar asesoramiento experto a los clientes.
+                  </p>
+                  <p>
                     Como asesor de desarrollo empresarial, he utilizado mis habilidades en automatización e implementación de políticas de ciberseguridad para simplificar procesos y mejorar la seguridad operativa. 
                     Mi experiencia en investigación y análisis de mercado también me ha permitido brindar información valiosa a los clientes sobre el comportamiento de sus competidores.
                     Me mantengo al día con los últimos desarrollos en mi campo. Mi pasión por la ciberseguridad se refleja en mi serie de artículos, "Criminalidad 4.0", que busca explicar nuevas formas de delitos de manera sencilla.
-                    Estoy dedicado a brindar un excelente servicio a mis clientes y siempre estoy dispuesto a ir más allá para lograr sus objetivos.
+                  </p>
+                  <p>Estoy dedicado a brindar un excelente servicio a mis clientes y siempre estoy dispuesto a ir más allá para lograr sus objetivos.
                   </p>
                 
-                  </p>
+                  
                 </div>
               </PostFullContent>
             </article>
