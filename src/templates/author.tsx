@@ -63,7 +63,7 @@ function Author({ data, location }: AuthorTemplateProps) {
     let authorParticipated = false;
     if (edge.node.frontmatter.author) {
       edge.node.frontmatter.author.forEach(element => {
-        if (element.name === author.name) {
+        if (element.name && element.name === author.name) {
           authorParticipated = true;
         }
       });
