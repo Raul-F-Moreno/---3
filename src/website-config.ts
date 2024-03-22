@@ -55,20 +55,18 @@ export type WebsiteConfig = {
 
 const config: WebsiteConfig = {
   title: 'Cyberlawyer.run',
-  description: 'Servicios jurídicos especializados en tecnología.',
+  description: 'Servicios jurídicos especializados en tecnología🔎⚖️',
   coverImage: 'img/temp1.jpg',
     logo: 'img/cyberlawyer.PNG',
-  lang: 'en',
+  lang: 'es',
   siteUrl: 'https://gatsby-casper.netlify.com',
-  facebook: 'https://www.facebook.com/ghost',
-  twitter: 'https://twitter.com/tryghost',
-  showSubscribe: true,
+  showSubscribe: false,
   mailchimpAction:
     'https://twitter.us19.list-manage.com/subscribe/post?u=a89b6987ac248c81b0b7f3a0f&amp;id=7d777b7d75',
   mailchimpName: 'b_a89b6987ac248c81b0b7f3a0f_7d777b7d75',
   mailchimpEmailFieldName: 'MERGE0',
   googleSiteVerification: 'GoogleCode',
-  footer: 'is based on Gatsby Casper',
+  footer: '',
   showAllTags: true,
 };
 
